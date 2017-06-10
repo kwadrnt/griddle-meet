@@ -1,0 +1,11 @@
+<h1>Welcome to GriddleMeet</h1>
+
+<div>
+There are currently <%= @users.length %> user(s) signed up!
+</div>
+
+<div>
+  <%= image_tag("truck.png", :alt => "food truck") %>
+</div>
+
+<%= button_to "Sign In", new_user_session_path, class: "signin" %>
