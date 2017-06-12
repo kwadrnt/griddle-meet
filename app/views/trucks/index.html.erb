@@ -3,7 +3,7 @@
 
     <p id="notice"><%= notice %></p>
 
-    <h1>Welcome <%= @user.name %>!</h1>
+    <h1>Welcome <%= @user.email %>!</h1>
 
     <h3 class='list-h3'>My Trucks</h3>
 
@@ -12,7 +12,7 @@
       <div id="list-container" class="container">
         <div class="row">
 
-            <h1 class="list-h1 col-md-8"><%= link_to truck.name, user_trucks_path(user_session,truck) %></h1>
+            <h1 class="list-h1 col-md-8"><%= link_to truck.name, edit_user_truck_path(@user, truck) %></h1>
             <button class="btn col-md-1 align-baseline"><%= link_to 'Edit', edit_user_truck_path(@user, truck) %></button>
             <button class="btn col-md-1 align-baseline"><%= link_to 'Delete', user_trucks_path(@user, truck), method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </div>

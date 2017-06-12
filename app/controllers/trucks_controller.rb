@@ -39,7 +39,7 @@ class TrucksController < ApplicationController
   # PATCH/PUT /trucks/1.json
   def update
     respond_to do |format|
-      if @truck.update(list_params_update)
+      if @truck.update(truck_params_update)
         format.html { redirect_to user_trucks_url, notice: 'Truck was successfully updated.' }
         format.json { render :show, status: :ok, location: @truck }
       else
@@ -57,6 +57,7 @@ class TrucksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_truck
@@ -68,7 +69,7 @@ class TrucksController < ApplicationController
     end
     # list params for update with require list
     def truck_params_update
-      params.require(:truck).permit(:name, :user_id, trucks_attributes: [:id,  :_destroy])
+      params.require(:truck).permit(:name, :user_id, :location, :menu, :hours, trucks_attributes: [:id,  :_destroy])
     end
     def set_user
       @user = User.find(params[:user_id])
