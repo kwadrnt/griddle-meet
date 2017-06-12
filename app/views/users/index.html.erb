@@ -1,16 +1,21 @@
-<h1>Welcome to GriddleMeet</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+      <h1>Welcome to GriddleMeet</h1>
 
-<div>
-There are currently <%= @users.length %> user(s) signed up!
+      <div>
+        There are currently <%= @users.length %> user(s) signed up!
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <div>
   <%= image_tag("truck.png", :alt => "food truck") %>
 </div>
 
-<%= button_to "Sign In", new_user_session_path, class: "signin" %>
-<%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "signout" %>
-<%= link_to "Sign Up", new_user_registration_path, class: "signout" %>
+
 
 <script src="//maps.google.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"> </script> <!-- this is general use API key from geoquakes -->
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
