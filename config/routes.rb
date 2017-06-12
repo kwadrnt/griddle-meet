@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 		resources :trucks
 	end
 
+  # Gmaps::Application.routes.draw do
+  #   resources :users
+  #   root 'users#index'
+  # end
 end
 
 # notes => match each view to route.
