@@ -17,6 +17,7 @@ class TrucksController < ApplicationController
   # GET /lists/new
   def new
     @truck = Truck.new
+    @user = set_user
   end
   # GET /lists/1/edit
   def edit
@@ -26,9 +27,16 @@ class TrucksController < ApplicationController
   # POST /trucks
   # POST /trucks.json
   def create
-    @truck = Truck.new
+    @user = current_user
+    @truck = Truck.new({
+      name: params['truck']['name'],
+      location: params['truck']['location'],
+      menu: params['truck']['menu'],
+      hours: params['truck']['hours']
+      })
     if @truck.save!
       flash[:notice] = "Truck saved successfully!"
+      @user.trucks << @truck
       redirect_to user_trucks_path
     else
       flash[:error] = @truck.errors.full_messages.join(", ")
@@ -65,7 +73,7 @@ class TrucksController < ApplicationController
     end
     # list param for create without require list
     def truck_params_create
-      params.permit(:name, :user_id, trucks_attributes: [:name, :user_id])
+      params.permit(:name, :user_id, :location, :menu, :hours, trucks_attributes: [:name, :user_id])
     end
     # list params for update with require list
     def truck_params_update
