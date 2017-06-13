@@ -1,19 +1,17 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-8">
-      <h1>Welcome to GriddleMeet</h1>
-
-      <div>
-        There are currently <%= @users.length %> user(s) signed up!
-      </div>
-
-    </div>
-  </div>
+<div class="container-fluid">
+  <h1 class="display">Welcome to GriddleMeet</h1>
+		<div class="col-sm-8 col-sm-offset-2">
+		<%= image_tag("truck.png", :alt => "food truck") %>
+		</div>
+		<div>
+			<p>
+				There are currently <%= @users.length %> user(s) signed up!
+			</p>
+		</div>
 </div>
 
-<div>
-  <%= image_tag("truck.png", :alt => "food truck") %>
-</div>
+
+
 
 
 
@@ -21,8 +19,9 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script>
 
-      <div class="col-sm-8 col-sm-offset-1">
-        <div id="map" style='width: 700px; height: 400px;'></div>
+<h1 class="display2">Check out the food trucks in SF!</h1>
+      <div class="col-lg-8 col-lg-offset-2">
+        <div id="map" style='width: 900px; height: 400px;'></div>
       </div>
     </div>
 
@@ -34,7 +33,7 @@
 <script type="text/javascript">
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+		markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
   });
