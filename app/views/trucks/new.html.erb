@@ -1,0 +1,32 @@
+<h1 class="list-h1">Add New Truck</h1>
+
+<%= form_for :truck, url: user_trucks_path do |form| %>
+
+  <div class="field">
+    <h5 class="truck-h5"><%= form.label :name %></h5>
+    <br />
+    <%= form.text_field :name , class: "form-control" %>
+  </div>
+  <div class="field">
+    <h5 class="truck-h5"><%= form.label :location %></h5>
+    <br />
+    <%= form.text_field :location , class: "form-control" %>
+  </div>
+  <div class="field">
+    <h5 class="truck-h5"><%= form.label :menu %></h5>
+    <br />
+    <%= form.text_field :menu , class: "form-control" %>
+  </div>
+  <div class="field">
+    <h5 class="truck-h5"><%= form.label :hours %></h5>
+    <br />
+    <%= form.text_field :hours , class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <button class="btn"><%= form.submit %></button>
+  </div>
+
+<% end %>
+
+<button class="btn"><%= link_to 'Back', user_trucks_path %></button>

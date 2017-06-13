@@ -26,7 +26,7 @@ class TrucksController < ApplicationController
   # POST /trucks
   # POST /trucks.json
   def create
-    @truck = Truck.new(list_params_create)
+    @truck = Truck.new
     if @truck.save!
       flash[:notice] = "Truck saved successfully!"
       redirect_to user_trucks_path
@@ -53,7 +53,7 @@ class TrucksController < ApplicationController
   def destroy
     @truck.destroy
     respond_to do |format|
-      format.html { redirect_to user_trucks_url, notice: 'Truck was successfully destroyed.' }
+      format.html { redirect_to user_trucks_path, notice: 'Truck was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

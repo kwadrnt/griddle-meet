@@ -14,7 +14,7 @@
 
             <h1 class="list-h1 col-md-8"><%= link_to truck.name, edit_user_truck_path(@user, truck) %></h1>
             <button class="btn col-md-1 align-baseline"><%= link_to 'Edit', edit_user_truck_path(@user, truck) %></button>
-            <button class="btn col-md-1 align-baseline"><%= link_to 'Delete', user_trucks_path(@user, truck), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            <button class="btn col-md-1 align-baseline"><%= link_to 'Destroy', user_truck_path(@user, truck), method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </div>
       </div>
 
