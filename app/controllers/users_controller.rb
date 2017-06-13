@@ -10,7 +10,9 @@ class UsersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@trucks) do |truck, marker|
     marker.lat truck.latitude
     marker.lng truck.longitude
-    marker.infowindow truck.name
+    marker.title truck.name
+    marker.infowindow render_to_string(:partial => "/users/info",
+        :locals => { :truck => truck}) # allows use of |truck| in partial
   end
 
   end
