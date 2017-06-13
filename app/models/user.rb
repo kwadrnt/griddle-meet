@@ -1,6 +1,7 @@
 class User < ApplicationRecord
+  attr_accessor :address, :latitude, :longitude
   # ONE to MANY: User > Trucks
-  	has_many :trucks
+  has_many :trucks
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

@@ -11,4 +11,6 @@ user3 = User.create({email: "test3@gmail.com", password:"111111", name:"Klay Tho
 
 truck1 = Truck.create({name: "Taco Guys", menu: "Tacos", hours: "10am-3pm", location: "24 Willie Mays Plaza, San Francisco, CA 94107", user_id: user1.id })
 truck2 = Truck.create({name: "Pizza Guys", menu: "Pizza", hours: "11am-2pm", location: "225 Bush St. San Francisco, CA 94104", user_id: user1.id })
-truck2 = Truck.create({name: "Pizza Guys", menu: "Pizza", hours: "11am-2pm", location: "800 Market St, San Francisco, CA 94103", user_id: user1.id })
+truck3 = Truck.create({name: "Boba Guys", menu: "Boba for days!", hours: "10am-4pm", location: "800 Market St, San Francisco, CA 94103", user_id: user1.id })
+
+truck4 = Truck.create({name: "Bibimbap Guys", menu: "Bibimbap!", hours: "10am-4pm", location: "801 Market St, San Francisco, CA 94103", user_id: user1.id })
