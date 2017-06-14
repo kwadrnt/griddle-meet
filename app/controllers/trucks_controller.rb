@@ -5,6 +5,7 @@ class TrucksController < ApplicationController
   # GET /lists
   # GET /lists.json
   def index
+    @user = set_user
     @trucks = @user.trucks.all
   end
   # GET /lists/1

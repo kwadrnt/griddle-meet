@@ -16,17 +16,41 @@
  */
 
 body {
-  background-color: #CCFFF9;
+  background-color: #EFEFEA;
 }
 
 .display {
+  padding-top: 0px;
   text-align: center;
+  margin: 0;
 }
 
 .display2 {
+  padding-top: 20px;
   text-align: center;
+  margin: 0;
 }
 
 #map {
   align: center;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: grey;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.footer_link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup {
+  text-align: center;
 }

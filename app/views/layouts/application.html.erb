@@ -4,8 +4,8 @@
     <title>GriddleMeet</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= yield :head %>
   </head>
 
@@ -22,7 +22,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active"><a href="/">Map <span class="sr-only">(current)</span></a></li>
-          <li class="active"><%= link_to "My Trucks", user_trucks_path(:user_id) %></li>
+          <% if user_signed_in? %>
+          <li class="active"><%= link_to "My Trucks", user_trucks_path(current_user) %></li>
+          <% end %>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -45,6 +47,13 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
+  <div class="footer_section">
+
+    </div>
+      <footer class="footer">
+        Enjoy GriddleMeet || created by<span class="footer_link"><a target="_blank" href="https://github.com/kwadrnt"> Kevin Tse </a></span> || a WDI production
+      </footer>
+    </div>
 
   </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GriddleMeet</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="O4uxhCjvn1X73bOlRLrH+ikJtzn4mAehhiU9cbkHWrRd9Rsc9dwXdT5B5fI4sUlRAJJZui+SMkoy7yRV64LuLQ==" />
+
+    <link rel="stylesheet" media="all" href="/assets/application.self-eca71dd28e127cac12e261e0d86bf6cb390aa7f484d7c35ec5012a34ddc275da.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/rails-ujs.self-56055fe2ac3f3902deb9d12c17b2d725d432162b48fc443946daf7dfbc96d88a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/registrations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/trucks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-6a7f81c89608537f1c0b5e6e1a1cad14caec515ae09b88e0406efa9bcbfd4752.js?body=1" data-turbolinks-track="reload"></script>
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand">GM</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Map <span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="/users/user_id/trucks">My Trucks</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> User Profile <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="signin" href="/users/sign_in">Sign In</a></li>
+              <li><a class="signout" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a></li>
+              <li><a class="signout" href="/users/sign_up">Sign Up</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+    <p class="notice"></p>
+    <p class="alert"></p>
+
+    
+
+<div class="col-md-6" id="signup">
+  <em><h2>Get Started!</h2></em>
+
+  <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="OltsEXlpQ2MWieDRCDXyo3gYLFBoCrV4gitjZjUCwc36TROPdT1UUoOwmgOHun4JyPWVYw6s/c0+F846U+TaAQ==" />
+  
+
+  <div class="field">
+    <label for="user_name">Name</label><br />
+    <input autofocus="autofocus" type="text" name="user[name]" id="user_name" />
+  </div>
+
+  <div class="field">
+    <label for="user_address">Address</label><br />
+    <input autofocus="autofocus" type="text" name="user[address]" id="user_address" />
+  </div>
+
+  <div class="field">
+    <label for="user_email">Email</label><br />
+    <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
+  </div>
+
+  <div class="field">
+    <label for="user_password">Password</label>
+    <em>(6 characters minimum)</em>
+    <br />
+    <input autocomplete="off" type="password" name="user[password]" id="user_password" />
+  </div>
+
+  <div class="field">
+    <label for="user_password_confirmation">Password confirmation</label><br />
+    <input autocomplete="off" type="password" name="user[password_confirmation]" id="user_password_confirmation" />
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Sign up" data-disable-with="Sign up" />
+  </div>
+
+</div>
+
+
+</form>
+  <a href="/users/sign_in">Log in</a><br />
+
+
+
+
+
+
+
+  <div class="footer_section">
+
+    </div>
+      <footer class="footer">
+        Enjoy GriddleMeet || created by<span class="footer_link"><a target="_blank" href="https://github.com/kwadrnt"> Kevin Tse </a></span> || a WDI production
+      </footer>
+    </div>
+
+  </body>
+</html>

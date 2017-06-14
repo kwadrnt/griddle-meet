@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @trucks = @user.trucks
     @user = User.find(params[:id])
     if @user == nil
       redirect_to '/'
