@@ -9,8 +9,6 @@ A win-win for both the foodie and the truckie.
 Presented by Kevin Tse,
 General Assembly WDI #37
 
-![ScreenShot](flickd_home.png)
-
 # Tools
 
 * Ruby 2.4.0
