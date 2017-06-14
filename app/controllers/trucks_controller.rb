@@ -1,12 +1,11 @@
 class TrucksController < ApplicationController
   before_action :set_truck, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /lists
   # GET /lists.json
   def index
-    user = set_user
-    @trucks = user.trucks.all
+    @trucks = @user.trucks.all
   end
   # GET /lists/1
   # GET /lists/1.json
