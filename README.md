@@ -1,24 +1,51 @@
-# README
+# GriddleMeet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app that allows the hungry SF foodie to view Food truck location, availability, menu, and operating hours information via interactive map.
 
-Things you may want to cover:
+The app also allows food truck owners to signup, login, create food truck info, populate that information on a map for foodies to visit.  
 
-* Ruby version
+A win-win for both the foodie and the truckie.
 
-* System dependencies
+Presented by Kevin Tse,
+General Assembly WDI #37
 
-* Configuration
+![ScreenShot](flickd_home.png)
 
-* Database creation
+# Tools
 
-* Database initialization
+* Ruby 2.4.0
+* Ruby on Rails 5.1.1
+* Gems: Devise, jQuery-rails, sass-rails, boostrap, geocoder, gmaps4rails, jqeury-rails
+* Configuration: Nested Routes
+* Database creation: postgresql, activerecord
 
-* How to run the test suite
+# Guides to Use
 
-* Services (job queues, cache servers, search engines, etc.)
+1. New Account Setup via signup page
+2. Add Account Profile info
+3. Create New Truck and add info
+4. Edit truck info
+6. Truck info show up on Map page
 
-* Deployment instructions
 
-* ...
+# Bugs
+
+* ran into errors with devise and adding migrations
+* getting API data to show up on Google Maps
+* nested routing matching with path helpers for each view
+* which views to render and how
+
+# Stretch Goals
+
+* build in ratings like Yelp!
+* user can crud from MAP, maybe!
+* grab current_viewer location and show what’s immediately around them
+* incorporate links to google map app so user can get directions in real time!
+* expand to other major cities!
+* have live updates via notifications from food truck owners!
+
+# Contact Info
+
+* Kevin T. full stack web developer
+* [Github](https://github.com/kwadrnt)
+* [Portfolio](http://kevinbuilt.com/)
