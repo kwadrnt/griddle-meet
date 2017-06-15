@@ -1,8 +1,10 @@
-<div id="list-container" class="container">
-  <div class="row">
+<div class="row">
+  <div class="col-md-8">
+    <%= image_tag("truck.png")%>
+  </div>
 
-
-		<h3 class="list-h3">Editing Truck</h3>
+  <div class="col-md-4" id="edit">
+    <em><h2>Editing Truck</h2></em>
 
 		<%= form_for @truck, url: user_truck_path(@user,@truck) do |form| %>
 		  <div class="field">
