@@ -9,8 +9,8 @@ A win-win for both the foodie and the truckie.
 Presented by Kevin Tse,
 General Assembly WDI #37
 
-my trello users stories : https://trello.com/b/xKAh28zd/griddlemeet
-my figma wireframes: https://www.figma.com/file/T0WqN1zFAA0bJkOJhYb67fVx/GriddleMeet
+* my trello users stories: https://trello.com/b/xKAh28zd/griddlemeet
+* my figma wireframes: https://www.figma.com/file/T0WqN1zFAA0bJkOJhYb67fVx/GriddleMeet
 
 # Tools
 
