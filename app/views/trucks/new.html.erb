@@ -1,4 +1,10 @@
-<h1 class="list-h1">Add New Truck</h1>
+<div class="row">
+  <div class="col-md-8">
+    <%= image_tag("truck.png")%>
+  </div>
+
+  <div class="col-md-4" id="edit">
+    <em><h2>Add New Truck</h2></em>
 
 <%= form_for @truck, url: user_trucks_path(@user) do |form| %>
 
@@ -27,6 +33,7 @@
     <button class="btn"><%= form.submit %></button>
   </div>
 
-<% end %>
-
+  <% end %>
+  </div>
+</div>
 <button class="btn"><%= link_to 'Back', user_trucks_path %></button>
